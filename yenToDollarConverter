@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class yen {
+
+	public static void main(String[] args) {
+	
+		
+		
+		double dollars;
+		Scanner in = new Scanner(System.in); // Read price of one dollar in Japanese 
+		System.out.print("Enter price of one dollar in Japanese yen ");
+		double oneDollarInYen = in.nextDouble();
+		// Read first dollar value:
+		System.out.print("Number  of  dollars  to  convert  to  Japanese  yen  (enter  0  to finish) ");
+		dollars = in.nextDouble();
+		while (dollars != 0)
+		{
+		System.out.printf("%.2f dollars equals %.2f Japanese yen \n",dollars,dollars*oneDollarInYen);// Read next dollar value:
+		System.out.print("\nNumber  of  dollars  to  convert  to  Japanese  yen (enter 0 to finish) ");
+		dollars = in.nextDouble();
+break;
+
+}
+}
+}
