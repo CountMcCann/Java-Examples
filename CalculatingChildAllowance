@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class childAllowanceCalculator {
+
+	public static void main(String[] args) { 
+
+	
+		double familyIncome;
+		int NumOfChild;
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Please enter family income");
+		familyIncome  = in.nextDouble();
+		
+		System.out.println("Please enter number of children");
+		NumOfChild = in.nextInt();
+		
+		System.out.println(calculateAssistance (familyIncome, NumOfChild));
+		
+	}
+	public static double calculateAssistance(double familyIncome, int NumOfChild) {
+		
+		double cc = 0.0;
+		
+		if(familyIncome >= 30000 && familyIncome <= 40000 && NumOfChild >=3)
+		{
+			cc = NumOfChild * 1000;		
+		}
+	
+		else if (familyIncome >= 20000 && familyIncome < 30000 && NumOfChild >=2)
+		{
+			cc = NumOfChild * 1500;
+		}
+		
+		else if (familyIncome < 20000)
+		{
+			cc = NumOfChild * 2000;		
+		}
+			return cc;
+		
+
+	}
+
+}
