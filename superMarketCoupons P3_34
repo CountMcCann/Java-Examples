@@ -1,0 +1,28 @@
+package supermarketCoupons;
+import java.util.Scanner;
+
+public class P3_34 {
+
+	public static void main(String[] args){
+		
+		int amountSpent;
+	
+	Scanner in = new Scanner(System.in);   
+	System.out.println("How much did you spend? (Type here to see your coupon discount)");
+	amountSpent = in.nextInt();
+	
+	if (amountSpent>=210){
+			System.out.println("Your 14% coupon is $"+ amountSpent*0.14 );
+		}else if(amountSpent  >=150){
+			System.out.println("your 12% coupon is $"+ amountSpent*0.12 );
+		}
+		else if(amountSpent >= 60){
+			System.out.println("your 10% coupon is $"+ amountSpent*0.10 );
+		}else if(amountSpent >= 10){
+			System.out.println("your 8% coupon is $"+ amountSpent*0.08);
+		}else {
+			System.out.println("You did not spend enough to get a coupon this time!");
+			}
+
+	}
+}
