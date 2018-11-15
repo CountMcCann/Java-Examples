@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class P2_17
+ {
+
+  public static void main(String[] args) 
+  {
+	  final int MinPerHour = 60;
+	  final int MinPerDay = MinPerHour * 24;
+	  int firstTime;
+	  int secondTime;
+	  int firstTimePerMin;
+	  int secondTimePerMin; 
+	  int minutes;
+	  int hours;
+	  
+	  	Scanner in = new Scanner(System.in); 
+	  	System.out.println("Please type first time in 24hr format, do not include : symbol ");
+        firstTime = in.nextInt();
+         
+        	firstTimePerMin = firstTime / 100 * MinPerHour + firstTime % 100; 
+         
+	  	System.out.println("Please type second time in 24hr format do not include : symbol ");
+	  	secondTime = in.nextInt();
+	  				 
+  
+	  		secondTimePerMin = secondTime / 100 * MinPerHour + secondTime % 100;
+	  		
+	  		 		
+	  		 		
+	  	minutes = secondTimePerMin - firstTimePerMin; 
+	  	minutes = (MinPerDay + minutes) % MinPerDay;
+	  	
+	  	hours = minutes / 60; 
+        minutes %= 60; 
+        
+        System.out.printf("%d hours %d minutes", hours,minutes); 
+  }
+  
+  
+}
