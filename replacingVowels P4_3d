@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class P4_3d
+{
+	public static void main(String[]args)
+	{
+	Scanner in = new Scanner(System.in);
+	System.out.println("Please enter a word:");
+	String stringdif = in.next();
+	String strNew = "";
+	int i=0;
+	while (i<stringdif.length())
+		{
+			char char1 = stringdif.charAt(i);
+			boolean vowel = (char1 =='a'||char1=='e'||char1=='i'||char1=='o'||char1=='u');	//capitals and lowers 
+			boolean vowelUpper = (char1 =='A'||char1=='E'||char1=='I'||char1=='O'||char1=='U'); 
+			if(vowel)
+			{
+				strNew=strNew+"_";
+			}
+			else
+			{
+					strNew=strNew+stringdif.substring(i,i+1);
+			}
+			i=i+1;
+		}
+		System.out.println("The new string is:");
+		System.out.println(strNew);
+
+	
+	}
+}	
+
+
