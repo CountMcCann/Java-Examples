@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class PhoneNumberChange
+{
+	
+	public static void main(String[] args)  {
+    System.out.println("enter phone number here");  // message display /  //printf because format /
+		Scanner in = new Scanner(System.in);          // receiving info /
+		
+		String originalPhoneNumber = in.next();     // defining inputted info /
+
+		System.out.println("unedited number: "+originalPhoneNumber); // display old number /
+		System.out.print("changed phone number: ("+originalPhoneNumber.substring(0,2)+")"+originalPhoneNumber.substring(3,5)+"-"+originalPhoneNumber.substring(6));
+
+
+
+			
+		}
+		
+
+	}
